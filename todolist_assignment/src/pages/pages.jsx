@@ -4,7 +4,8 @@ import Detail from "../components/detail/Detail";
 import TodoList from "./TodoList";
 
 
-const Pages = () => {
+
+const Pages = (id) => {
   return (
     <BrowserRouter>
         <Routes>

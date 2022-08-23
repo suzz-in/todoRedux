@@ -35,7 +35,7 @@ const initialState = [
 ];
 
 //Reducer
-const mytodo = (state = initialState, action) => {
+const todos = (state = initialState, action) => {
   switch (action.type) {
     case CREATE:
       const newTodo = [...state, action.mytodo];
@@ -61,7 +61,7 @@ const mytodo = (state = initialState, action) => {
   }
 };
 
-export default mytodo;
+export default todos;
 // export default function reducer(state = initialState, action = {}) {
 //   switch (action.type) {
 //     case "mytodo/CREATE":

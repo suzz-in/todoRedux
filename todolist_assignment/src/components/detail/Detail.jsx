@@ -7,7 +7,7 @@ function Detail() {
   const param = useParams();
   const navigate = useNavigate();
 
-  const todoStore = useSelector((state) => state.todo);
+  const todoStore = useSelector((state) => state.mytodo);
 
   return (
     <div>

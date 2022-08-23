@@ -8,7 +8,7 @@ function Todo({todo, onDeleteHanlder, onEditHandler }) {
     const navigate = useNavigate();
     return (
         <div className="todo_container" key={todo.id}>
-            <h6 onClick={()=> navigate("/detail/",${todo.id})}>상세보기</h6>
+            <h6 onClick={()=> navigate(`/detail/${todo.id}`)}>상세보기</h6>
 
             <h2>{todo.title}</h2>
             <p>{todo.body}</p>
