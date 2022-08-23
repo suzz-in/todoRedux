@@ -1,0 +1,27 @@
+.todo_container {
+  border: 4px solid teal;
+  border-radius: 12px;
+  padding: 12px 24px 24px;
+  width: 270px;
+}
+
+
+.todo_container > button {
+border-radius: 8px;
+cursor: pointer;
+height: 40px;
+width: 50%;
+}
+
+.del_btn {
+  background-color: #fff;
+  border: 2px solid red;
+}
+
+
+.compl_btn:hover {
+  cursor: pointer;
+  font-size: calc(100%);
+  background-color:black;
+  color: white;
+}
