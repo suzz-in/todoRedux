@@ -1,5 +1,5 @@
 import React, {useState, useRef} from "react"
-import './style.css'
+import styled from "styled-components";
 import {useDispatch} from "react-redux"
 import { addTodo } from "../../redux/modules/mytodo"
 
@@ -34,17 +34,67 @@ function Form() {
     }
    
     return (
-        <form onSubmit={onSubmitHandler} className="form_container">
-            <div className='input_container'>
-                <label>제목</label>
+        <Formcontainer onSubmit={onSubmitHandler}>
+            <Inputcontainer>
+                <Label>제목</Label>
 
-                <input type='text' name="title" onChange={onChangeHandler} value={inputTodo.title} required/> 
-                <label>내용</label>
-                <input type='text' name="body" onChange={onChangeHandler} value={inputTodo.body}/>
-                <button>추가하기</button>
-            </div>
+                <Titleinput type='text' name="title" onChange={onChangeHandler} value={inputTodo.title} required/> 
+                <Label>내용</Label>
+                <Titleinput type='text' name="body" onChange={onChangeHandler} value={inputTodo.body}/>
+                <Addbtn>추가하기</Addbtn>
+            </Inputcontainer>
             
-        </form>
+        </Formcontainer>
     )
 }
 export default Form;
+
+const Formcontainer =styled.form`
+background-color: rgb(238, 238, 238);
+    border-radius: 12px;
+    margin: 0px auto;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
+
+`
+
+const Inputcontainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: space-between;
+height: 70px;
+box-sizing: border-box;
+padding: 25px;
+background-color:#eee;
+`
+const Titleinput = styled.input`
+height: 40px;
+    width: 240px;
+    border: none;
+    border-radius: 12px;
+    padding: 0px 12px;
+`
+const Label = styled.label`
+font-size: 16px;
+font-weight: 700;
+`
+
+const Addbtn =styled.button`
+background-color: teal;
+bottom: none;
+border-radius: 10px;
+color: #fff;
+font-weight: 700;
+height: 40px;
+width: 140px;
+&:hover{
+  cursor: pointer;
+
+  width: calc(15%);
+}
+`

@@ -1,11 +1,17 @@
 import React from 'react'
-import './style.css'
+import styled from "styled-components";
 // 부모컴포넌트에서 값 받아온다 props로 
 function Layout(props) {
     return (
-        <div className='layout'>
+        <LayoutContainer>
             {props.children}
-        </div>
+        </LayoutContainer>
     )
 }
-export default Layout
+export default Layout;
+
+const LayoutContainer = styled.div`
+max-width: 1200px;
+min-width: 800px;
+margin: 0px auto;
+`

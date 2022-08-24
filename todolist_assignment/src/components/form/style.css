@@ -1,4 +1,4 @@
-
+/* 
 
 .add-form {
   background-color: #eee;
@@ -35,21 +35,9 @@ padding: 0 12px;
 
 }
 
-.input_container > button {
-background-color: teal;
-bottom: none;
-border-radius: 10px;
-color: #fff;
-font-weight: 700;
-height: 40px;
-width: 140px;
-}
 
-.input_container > button:hover {
-  cursor: pointer;
 
-  width: calc(15%);
-}
+
 .input-group {
   display: flex;
   align-items: center;
@@ -78,4 +66,9 @@ font-weight: 700;
   width: 140px;
   color: #fff;
   font-weight: 700;
+} */
+.input_container > button:hover {
+  cursor: pointer;
+
+  width: calc(15%);
 }

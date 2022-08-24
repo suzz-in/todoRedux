@@ -1,5 +1,5 @@
 import React from "react";
-import './style.css';
+import styled from "styled-components";
 import Todo from '../todo/Todo';
 import { useSelector, useDispatch } from "react-redux";
 import { deleteTodo, toggleStatusTodo } from "../../redux/modules/mytodo";
@@ -37,9 +37,9 @@ function List() {
     // }
 
     return (
-        <div className="list-container">
+        <Listcontainer>
       <h2 className="list-title pb-4">Working.. 🔥</h2>
-      <div className="list-wrapper ">
+      <Listwrap>
         {todosList.map((todo) => {
           if (!todo.isDone) {
             return <Todo todo={todo} key={todo.id} onEditHandler={onEditHandler} onDeleteHanlder={onDeleteHanlder} />;
@@ -47,9 +47,9 @@ function List() {
             return null;
           }
         })}
-      </div>
+      </Listwrap>
       <h2 className="list-title pb-4">Done🎉</h2>
-      <div className="list-wrapper ">
+      <Listwrap>
         {todosList.map((todo) => {
           if (todo.isDone) {
             return <Todo todo={todo} key={todo.id} onEditHandler={onEditHandler} onDeleteHanlder={onDeleteHanlder} />;
@@ -57,9 +57,19 @@ function List() {
             return null;
           }
         })}
-      </div>
-    </div>
+      </Listwrap>
+    </Listcontainer>
   );
 }
     
 export default List;
+
+const Listcontainer = styled.div`
+padding: 20px;
+`
+
+const Listwrap = styled.div`
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+`
