@@ -16,7 +16,6 @@ ___
      - Detail.jsx  
        
    + Pages (페이지들을 모은 폴더)  
-     - pages.jsx  (라우팅하기 위한 페이지)
      - TodoList.jsx (페이지를 보여줌)  
        
    + redux  
@@ -24,7 +23,7 @@ ___
      - modules  
         + mytodo.js (리듀서)  
 * App.js  
-* index.js  
+* index.js(라우팅하기 위한 페이지)  
   
 ___  
 ## ⚙구현기능  
